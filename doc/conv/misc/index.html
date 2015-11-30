@@ -9,6 +9,7 @@
 
     <title>conv::misc - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
 
     
@@ -24,10 +25,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>conv</a></p><script>window.sidebarCurrent = {name: 'misc', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,48 +43,44 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>conv</a>::<wbr><a class='mod' href=''>misc</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-8548' class='srclink' href='../../src/conv/misc.rs.html#1-71' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1011' class='srclink' href='../../src/conv/src/misc.rs.html#1-73' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>This module defines some additional traits not <em>directly</em> tied to conversions.</p>
 </div><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='trait' href='trait.InvalidSentinel.html'
-                               title='conv::misc::InvalidSentinel'>InvalidSentinel</a></td>
-                        <td class='docblock short'>
-                             <p>This trait indicates that a type has an &quot;invalid&quot; sentinel value.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='trait' href='trait.Saturated.html'
-                               title='conv::misc::Saturated'>Saturated</a></td>
-                        <td class='docblock short'>
-                             <p>This trait indicates that values of a type can be logically &quot;saturated&quot;.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='trait' href='trait.SignedInfinity.html'
-                               title='conv::misc::SignedInfinity'>SignedInfinity</a></td>
-                        <td class='docblock short'>
-                             <p>This trait indicates that a type has positive and negative &quot;infinity&quot; values.</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.InvalidSentinel.html'
+                                  title='conv::misc::InvalidSentinel'>InvalidSentinel</a></td>
+                           <td class='docblock short'>
+                                <p>This trait indicates that a type has an &quot;invalid&quot; sentinel value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.Saturated.html'
+                                  title='conv::misc::Saturated'>Saturated</a></td>
+                           <td class='docblock short'>
+                                <p>This trait indicates that values of a type can be logically &quot;saturated&quot;.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.SignedInfinity.html'
+                                  title='conv::misc::SignedInfinity'>SignedInfinity</a></td>
+                           <td class='docblock short'>
+                                <p>This trait indicates that a type has positive and negative &quot;infinity&quot; values.</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -100,7 +97,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -116,11 +113,11 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -132,6 +129,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

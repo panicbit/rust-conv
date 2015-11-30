@@ -9,6 +9,7 @@
 
     <title>conv::ConvUtil - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
 
     
@@ -24,10 +25,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='index.html'>conv</a></p><script>window.sidebarCurrent = {name: 'ConvUtil', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,10 +43,10 @@
 
     <section id='main' class="content trait">
 <h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>conv</a>::<wbr><a class='trait' href=''>ConvUtil</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-26675' class='srclink' href='../src/conv/lib.rs.html#426-459' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-3180' class='srclink' href='../src/conv/src/lib.rs.html#488-521' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait ConvUtil {
     fn <a href='#method.approx_as' class='fnname'>approx_as</a>&lt;Dst&gt;(self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;Dst, Self::<a class='trait' href='../conv/trait.ConvUtil.html' title='conv::ConvUtil'>Err</a>&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../conv/trait.ApproxInto.html' title='conv::ApproxInto'>ApproxInto</a>&lt;Dst&gt;</span> { ... }
     fn <a href='#method.approx_as_by' class='fnname'>approx_as_by</a>&lt;Dst, Scheme&gt;(self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;Dst, Self::<a class='trait' href='../conv/trait.ConvUtil.html' title='conv::ConvUtil'>Err</a>&gt; <span class='where'>where Self: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../conv/trait.ApproxInto.html' title='conv::ApproxInto'>ApproxInto</a>&lt;Dst, Scheme&gt;, Scheme: <a class='trait' href='../conv/trait.ApproxScheme.html' title='conv::ApproxScheme'>ApproxScheme</a></span> { ... }
@@ -73,16 +74,18 @@
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
     </ul><script type="text/javascript" async
-                              src="../implementors/conv/trait.ConvUtil.js">
-                      </script></section>
+                         src="../implementors/conv/trait.ConvUtil.js">
+                 </script></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -99,7 +102,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -115,11 +118,11 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -131,6 +134,6 @@
     <script src="../jquery.js"></script>
     <script src="../main.js"></script>
     
-    <script async src="../search-index.js"></script>
+    <script defer src="../search-index.js"></script>
 </body>
 </html>

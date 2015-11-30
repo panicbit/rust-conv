@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -1170,7 +1170,7 @@ Safely unwrap a `Result` that cannot contain an error.
     <span class='kw'>fn</span> <span class='ident'>unwrap_ok</span>(<span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>T</span> {
         <span class='kw'>match</span> <span class='self'>self</span> {
             <span class='prelude-val'>Ok</span>(<span class='ident'>v</span>) <span class='op'>=&gt;</span> <span class='ident'>v</span>,
-            <span class='prelude-val'>Err</span>(..) <span class='op'>=&gt;</span> <span class='kw'>loop</span> {},
+            <span class='prelude-val'>Err</span>(<span class='ident'>no_error</span>) <span class='op'>=&gt;</span> <span class='kw'>match</span> <span class='ident'>no_error</span> {},
         }
     }
 }
@@ -1222,8 +1222,8 @@ Unwrap a conversion by saturating.
         <span class='kw'>use</span> <span class='self'>self</span>::<span class='ident'>RangeErrorKind</span>::<span class='op'>*</span>;
         <span class='kw'>match</span> <span class='self'>self</span>.<span class='ident'>map_err</span>(<span class='ident'>Into</span>::<span class='ident'>into</span>) {
             <span class='prelude-val'>Ok</span>(<span class='ident'>v</span>) <span class='op'>=&gt;</span> <span class='ident'>v</span>,
-            <span class='prelude-val'>Err</span>(<span class='ident'>NegOverflow</span>(..)) <span class='op'>=&gt;</span> <span class='ident'>T</span>::<span class='ident'>neg_infinity</span>(),
-            <span class='prelude-val'>Err</span>(<span class='ident'>PosOverflow</span>(..)) <span class='op'>=&gt;</span> <span class='ident'>T</span>::<span class='ident'>pos_infinity</span>(),
+            <span class='prelude-val'>Err</span>(<span class='ident'>NegOverflow</span>) <span class='op'>=&gt;</span> <span class='ident'>T</span>::<span class='ident'>neg_infinity</span>(),
+            <span class='prelude-val'>Err</span>(<span class='ident'>PosOverflow</span>) <span class='op'>=&gt;</span> <span class='ident'>T</span>::<span class='ident'>pos_infinity</span>(),
         }
     }
 }
@@ -1248,8 +1248,8 @@ Unwrap a conversion by saturating.
         <span class='kw'>use</span> <span class='self'>self</span>::<span class='ident'>RangeErrorKind</span>::<span class='op'>*</span>;
         <span class='kw'>match</span> <span class='self'>self</span>.<span class='ident'>map_err</span>(<span class='ident'>Into</span>::<span class='ident'>into</span>) {
             <span class='prelude-val'>Ok</span>(<span class='ident'>v</span>) <span class='op'>=&gt;</span> <span class='ident'>v</span>,
-            <span class='prelude-val'>Err</span>(<span class='ident'>NegOverflow</span>(..)) <span class='op'>=&gt;</span> <span class='ident'>T</span>::<span class='ident'>saturated_min</span>(),
-            <span class='prelude-val'>Err</span>(<span class='ident'>PosOverflow</span>(..)) <span class='op'>=&gt;</span> <span class='ident'>T</span>::<span class='ident'>saturated_max</span>(),
+            <span class='prelude-val'>Err</span>(<span class='ident'>NegOverflow</span>) <span class='op'>=&gt;</span> <span class='ident'>T</span>::<span class='ident'>saturated_min</span>(),
+            <span class='prelude-val'>Err</span>(<span class='ident'>PosOverflow</span>) <span class='op'>=&gt;</span> <span class='ident'>T</span>::<span class='ident'>saturated_max</span>(),
         }
     }
 }
@@ -1259,10 +1259,12 @@ Unwrap a conversion by saturating.
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -1279,7 +1281,7 @@ Unwrap a conversion by saturating.
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -1299,7 +1301,7 @@ Unwrap a conversion by saturating.
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -1311,6 +1313,6 @@ Unwrap a conversion by saturating.
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

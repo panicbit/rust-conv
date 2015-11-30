@@ -9,6 +9,7 @@
 
     <title>conv::errors::UnwrapOk - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
 
     
@@ -24,10 +25,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>conv</a>::<wbr><a href='index.html'>errors</a></p><script>window.sidebarCurrent = {name: 'UnwrapOk', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,10 +43,10 @@
 
     <section id='main' class="content trait">
 <h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>conv</a>::<wbr><a href='index.html'>errors</a>::<wbr><a class='trait' href=''>UnwrapOk</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-8384' class='srclink' href='../../src/conv/errors.rs.html#510-517' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-962' class='srclink' href='../../src/conv/src/errors.rs.html#510-517' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait UnwrapOk&lt;T&gt; {
     fn <a href='#tymethod.unwrap_ok' class='fnname'>unwrap_ok</a>(self) -&gt; T;
 }</pre><div class='docblock'><p>Safely unwrap a <code>Result</code> that cannot contain an error.</p>
@@ -60,16 +61,18 @@
         <ul class='item-list' id='implementors-list'>
     <li><code>impl&lt;T&gt; <a class='trait' href='../../conv/errors/trait.UnwrapOk.html' title='conv::errors::UnwrapOk'>UnwrapOk</a>&lt;T&gt; for <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;T, <a class='enum' href='../../conv/errors/enum.NoError.html' title='conv::errors::NoError'>NoError</a>&gt;</code></li>
 </ul><script type="text/javascript" async
-                              src="../../implementors/conv/errors/trait.UnwrapOk.js">
-                      </script></section>
+                         src="../../implementors/conv/errors/trait.UnwrapOk.js">
+                 </script></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -86,7 +89,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -102,11 +105,11 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -118,6 +121,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>
