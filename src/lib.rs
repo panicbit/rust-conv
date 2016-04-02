@@ -72,6 +72,7 @@ The following traits are used to define various conversion semantics:
 
 - [`ApproxFrom`](./trait.ApproxFrom.html)/[`ApproxInto`](./trait.ApproxInto.html) - approximate conversions, with selectable approximation scheme (see [`ApproxScheme`](./trait.ApproxScheme.html)).
 - [`TryFrom`](./trait.TryFrom.html)/[`TryInto`](./trait.TryInto.html) - general, potentially failing value conversions.
+- [`MaybeFrom`](./trait.MaybeFrom.html)/[`TryInto`](./trait.MaybeInto.html) - general, optional value conversions.
 - [`ValueFrom`](./trait.ValueFrom.html)/[`ValueInto`](./trait.ValueInto.html) - exact, value-preserving conversions.
 
 When *defining* a conversion, try to implement the `*From` trait variant where possible.  When *using* a conversion, try to depend on the `*Into` trait variant where possible.  This is because the `*Into` traits automatically use `*From` implementations, but not the reverse.  Implementing `*From` and using `*Into` ensures conversions work in as many contexts as possible.
@@ -551,3 +552,35 @@ pub trait ConvAsUtil<Dst> {
 }
 
 impl<T, Dst> ConvAsUtil<Dst> for T {}
+
+/**
+This trait is used to perform an optional conversion between different semantic types.
+
+Where possible, prefer *implementing* this trait over `MaybeInto`, but prefer *using* `MaybeInto` for generic constraints.
+*/
+pub trait MaybeFrom<Src>: Sized {
+    /// Convert the given value into the subject type.
+    fn maybe_from(Src) -> Option<Self>;
+}
+
+impl<Src> MaybeFrom<Src> for Src {
+    fn maybe_from(src: Src) -> Option<Self> {
+        Some(src)
+    }
+}
+
+/**
+This is the dual of `MaybeFrom`; see that trait for information.
+
+Where possible, prefer *using* this trait over `MaybeFrom` for generic constraints, but prefer *implementing* `MaybeFrom`.
+*/
+pub trait MaybeInto<Dst>: Sized {
+    /// Convert the subject into the destination type.
+    fn maybe_into(self) -> Option<Dst>;
+}
+
+impl<Src, Dst> MaybeInto<Dst> for Src where Dst: MaybeFrom<Src> {
+    fn maybe_into(self) -> Option<Dst> {
+        MaybeFrom::maybe_from(self)
+    }
+}
